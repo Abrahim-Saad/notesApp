@@ -25,5 +25,8 @@ app.use(require('../Routes/signOut.routes'))
 app.use(require('../Routes/homePage.routes'))
 app.use(require('../Routes/crudOperations.routes'))
 
+app.get('*', (request, response) => {
+  response.send("404 Page Not Found!!")
+})
 
 module.exports = app
