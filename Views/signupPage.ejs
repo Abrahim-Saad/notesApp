@@ -1,0 +1,27 @@
+<%- include("shared/header.ejs") %> 
+
+<div class="container my-5 py-5">
+    <div class="col-md-5 m-auto text-center">
+        <form action="/addNewAccount" method="POST">
+            <div class="form-group">
+                <input placeholder="Enter your name" value="<%=oldInputs.userName%>" name="userName" type="text" class=" form-control" />
+            </div>
+            <div class="form-group">
+                <input placeholder="Enter email" type="email" value="<%=oldInputs.userEmail%>" name="userEmail" class="form-control" />
+                <% if (emailExists) { %>
+                    <input class="alert alert-danger form-control error" value="Email Already Exists" readonly>
+                 
+                <% } %>
+            </div>
+            <div class="form-group">
+                <input placeholder="Enter you password" type="password" value="<%=oldInputs.userPassword%>" name="userPassword" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input placeholder="confirm Password" type="password" name="confirmPassword" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-info w-100">SignUp</button>
+        </form>
+    </div>
+</div>
+
+<%- include("shared/footer.ejs") %> 

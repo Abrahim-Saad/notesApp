@@ -1,0 +1,33 @@
+<%- include("shared/header.ejs") %> 
+
+<div class="container my-5 py-5">
+    <div class="col-md-5 m-auto text-center">
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <input placeholder="Enter Email" type="email" value="<%=oldInputs.userEmail%>" name="userEmail" class="form-control" />
+                <% if (emailExists == false) { %>
+                    <input class="alert alert-danger form-control error" value="Email doesn't Exist!!" readonly>
+                 
+                <% } %>
+
+                <% if (invalidEmail) { %>
+                    <input class="alert alert-danger form-control error" value="Invalid Email!!" readonly>
+                 
+                <% } %>
+            </div>
+
+            <div class="form-group">
+                <input placeholder="Enter Password" type="password" value="<%=oldInputs.userPassword%>" name="userPassword" class="form-control" />
+                <% if (passwordCorrect == false) { %>
+                    <input class="alert alert-danger form-control error" value="Password is Incorrect!!" readonly>
+                 
+                <% } %>
+                
+            </div>
+
+            <button type="submit" class="btn btn-info w-100">SignIn</button>
+        </form>
+    </div>
+</div>
+
+<%- include("shared/footer.ejs") %> 
