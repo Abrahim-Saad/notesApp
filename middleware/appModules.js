@@ -12,7 +12,7 @@ const store = new MongoDBStore({
 
 app.use(flash())
 app.use(express.urlencoded({ extended: false }))
-app.use(express.static(path.join(__dirname, './Public')))
+app.use(express.static(path.join(__dirname, './public')))
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
