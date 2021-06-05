@@ -1,5 +1,5 @@
 const app = require('express').Router();
-const signOutController = require('../Controllers/signOutController')
+const signOutController = require('../controllers/signOutController')
 
 app.get('/signout', signOutController.signOut)
 

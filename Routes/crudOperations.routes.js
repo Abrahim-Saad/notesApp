@@ -1,5 +1,5 @@
 const app = require('express').Router();
-const crudOperationsController = require('../Controllers/crudOperationsController')
+const crudOperationsController = require('../controllers/crudOperationsController')
 
 app.post('/addNote', crudOperationsController.addNote)
 

@@ -1,4 +1,4 @@
-const noteCollection = require('../Models/noteModel')
+const noteCollection = require('../models/noteModel')
 
 module.exports.addNote = async (request, response) => {
     const { noteTitle, noteContent } = request.body

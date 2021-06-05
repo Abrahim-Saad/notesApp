@@ -2,9 +2,20 @@ const mongoose = require('mongoose')
 mongoose.set('useFindAndModify', false);
 
 noteSchema = mongoose.Schema({
-    noteTitle: String,
-    noteContent: String,
-    userID: { type: mongoose.Schema.Types.ObjectId, ref: 'user'},
+    noteTitle: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    
+    noteContent: {
+        type: String,
+        required: true,
+    },
+
+    userID: { 
+        type: mongoose.Schema.Types.ObjectId, ref: 'user'
+    },
 })
 
 const noteModel = mongoose.model('note', noteSchema)

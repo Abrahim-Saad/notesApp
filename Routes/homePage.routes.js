@@ -1,6 +1,6 @@
 const app = require('express').Router();
-const signinAuthenticator = require('../Middleware/projectModules/signinAuthenticator')
-const homePageController = require('../Controllers/homePageController')
+const signinAuthenticator = require('../middleware/projectModules/signinAuthenticator')
+const homePageController = require('../controllers/homePageController')
 
 app.get('/home', signinAuthenticator, homePageController.homePage)
 

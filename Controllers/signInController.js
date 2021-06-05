@@ -1,4 +1,4 @@
-const userCollection = require('../Models/userModel')
+const userCollection = require('../models/userModel')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcrypt')
 

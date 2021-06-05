@@ -19,11 +19,11 @@ app.use(session({
     saveUninitialized: false,
     store
 }))
-app.use(require('../Routes/signUp.routes'))
-app.use(require('../Routes/signIn.routes'))
-app.use(require('../Routes/signOut.routes'))
-app.use(require('../Routes/homePage.routes'))
-app.use(require('../Routes/crudOperations.routes'))
+app.use(require('../routes/signUp.routes'))
+app.use(require('../routes/signIn.routes'))
+app.use(require('../routes/signOut.routes'))
+app.use(require('../routes/homePage.routes'))
+app.use(require('../routes/crudOperations.routes'))
 
 app.get('*', (request, response) => {
   response.send("404 Page Not Found!!")

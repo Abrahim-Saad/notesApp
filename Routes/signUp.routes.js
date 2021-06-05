@@ -1,8 +1,8 @@
 const app = require('express').Router();
 
-const signupFormInputValidator = require('../Validators/signUpFormValidator')
-const signupAuthenticator = require('../Middleware/projectModules/signupAuthenticator')
-const signUpController = require('../Controllers/signUpController')
+const signupFormInputValidator = require('../validators/signUpFormValidator')
+const signupAuthenticator = require('../middleware/projectModules/signupAuthenticator')
+const signUpController = require('../controllers/signUpController')
 
 app.get('/', signupAuthenticator, signUpController.signUp)
 
